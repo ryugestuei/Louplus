@@ -1,0 +1,104 @@
+shiyanlou:~/ $ git clone https://github.com/shiyanlou/gitproject      [0:06:46]
+正克隆到 'gitproject'...
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+展开对象中: 100% (3/3), 完成.
+检查连接... 完成。
+shiyanlou:~/ $ ls                                                     [0:08:10]
+Code     gitproject  lib           package.json  webpack.config.js
+Desktop  golang      node_modules  src-gen       yarn.lock
+shiyanlou:~/ $ git clone https://github.com/ryugestuei/Louplus.git    [0:08:14]
+正克隆到 'Louplus'...
+warning: 您似乎克隆了一个空仓库。
+检查连接... 完成。
+shiyanlou:~/ $ ls                                                     [0:09:49]
+Code     gitproject  lib      node_modules  src-gen            yarn.lock
+Desktop  golang      Louplus  package.json  webpack.config.js
+shiyanlou:~/ $ cd louplus                                             [0:10:03]
+cd: 没有那个文件或目录: louplus
+shiyanlou:~/ $ cd Louplus                                             [0:10:29]
+shiyanlou:Louplus/ (master) $ wget https://labfile.oss.aliyuncs.com/courses/1330/linux.png
+--2020-05-29 00:11:25--  https://labfile.oss.aliyuncs.com/courses/1330/linux.png
+正在解析主机 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)... 47.110.177.159
+正在连接 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)|47.110.177.159|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 132450 (129K) [image/png]
+正在保存至: “linux.png”
+
+linux.png           100%[===================>] 129.35K   202KB/s    in 0.6s    
+
+2020-05-29 00:11:31 (202 KB/s) - 已保存 “linux.png” [132450/132450])
+
+shiyanlou:Louplus/ (master*) $ wget https://labfile.oss.aliyuncs.com/courses/1330/python1.png
+wget https://labfile.oss.aliyuncs.com/courses/1330/python2.png
+wget https://labfile.oss.aliyuncs.com/courses/1330/git.png
+--2020-05-29 00:12:37--  https://labfile.oss.aliyuncs.com/courses/1330/python1.png
+正在解析主机 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)... 47.110.177.159
+正在连接 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)|47.110.177.159|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 126099 (123K) [image/png]
+正在保存至: “python1.png”
+
+python1.png         100%[===================>] 123.14K   144KB/s    in 0.9s    
+
+2020-05-29 00:12:39 (144 KB/s) - 已保存 “python1.png” [126099/126099])
+
+--2020-05-29 00:12:39--  https://labfile.oss.aliyuncs.com/courses/1330/python2.png
+正在解析主机 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)... 47.110.177.159
+正在连接 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)|47.110.177.159|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 148762 (145K) [image/png]
+正在保存至: “python2.png”
+
+python2.png         100%[===================>] 145.28K   221KB/s    in 0.7s    
+
+2020-05-29 00:12:41 (221 KB/s) - 已保存 “python2.png” [148762/148762])
+
+--2020-05-29 00:12:41--  https://labfile.oss.aliyuncs.com/courses/1330/git.png
+正在解析主机 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)... 47.110.177.159
+正在连接 labfile.oss.aliyuncs.com (labfile.oss.aliyuncs.com)|47.110.177.159|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 71912 (70K) [image/png]
+正在保存至: “git.png”
+
+git.png             100%[===================>]  70.23K   271KB/s    in 0.3s    
+
+2020-05-29 00:12:42 (271 KB/s) - 已保存 “git.png” [71912/71912])
+
+shiyanlou:Louplus/ (master*) $ git add --all                          [0:12:42]
+shiyanlou:Louplus/ (master*) $ git commit -m "shiyanloupictuer"       [0:13:17]
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <shiyanlou@9499c39121c1.(none)>) not allowed
+shiyanlou:Louplus/ (master*) $ git config --global user.email "lyy19890527@gmail.com"
+shiyanlou:Louplus/ (master*) $ git config --global user.name "ryugestuei"
+shiyanlou:Louplus/ (master*) $ git commit -m "shiyanlou naotu"        [0:15:46]
+[master （根提交） 032b12f] shiyanlou naotu
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git.png
+ create mode 100644 linux.png
+ create mode 100644 python1.png
+ create mode 100644 python2.png
+shiyanlou:Louplus/ (master) $ git remote add origin https://github.com/ryugestuei/Louplus.git
+fatal: 远程 origin 已经存在。
+shiyanlou:Louplus/ (master) $ git push origin master                  [0:18:59]
+Username for 'https://github.com': ryugestuei
+Password for 'https://ryugestuei@github.com': 
+对象计数中: 6, 完成.
+Delta compression using up to 4 threads.
+压缩对象中: 100% (6/6), 完成.
+写入对象中: 100% (6/6), 423.72 KiB | 0 bytes/s, 完成.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/ryugestuei/Louplus.git
+ * [new branch]      master -> master
+shiyanlou:Louplus/ (master) $                                         [0:21:15]
+
